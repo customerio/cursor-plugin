@@ -12,7 +12,7 @@ description: >
 
 Use this skill for installing Customer.io in an app and Builder/sandbox onboarding.
 
-1. Confirm the Customer.io MCP server is connected (`customerio` or `customerio-eu`, not both).
+1. Confirm the Customer.io MCP server `customerio` is connected.
 2. Call `cio_prime`.
 3. Read the live CLI/onboarding skill:
 

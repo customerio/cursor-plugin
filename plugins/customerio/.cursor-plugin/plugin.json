@@ -1,7 +1,7 @@
 {
   "name": "customerio",
   "displayName": "Customer.io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Connect Cursor to Customer.io with the official MCP connector and skills for Journeys, Pipelines, Design Studio, and SDK setup.",
   "author": {
     "name": "Customer.io",
@@ -21,5 +21,21 @@
     "email",
     "messaging"
   ],
-  "logo": "assets/logo.svg"
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "CUSTOMERIO_MCP_HOST": {
+        "type": "string",
+        "title": "Data center",
+        "description": "Must match your Customer.io account region. US accounts use mcp.customer.io. EU accounts use mcp-eu.customer.io. An account cannot mix regions.",
+        "enum": [
+          "mcp.customer.io",
+          "mcp-eu.customer.io"
+        ],
+        "default": "mcp.customer.io"
+      }
+    },
+    "required": ["CUSTOMERIO_MCP_HOST"]
+  }
 }

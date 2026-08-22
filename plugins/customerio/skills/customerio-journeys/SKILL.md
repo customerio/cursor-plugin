@@ -13,7 +13,7 @@ description: >
 
 Use this skill for workspace messaging and audience work in Journeys.
 
-1. Confirm the Customer.io MCP server is connected (`customerio` or `customerio-eu`, not both).
+1. Confirm the Customer.io MCP server `customerio` is connected.
 2. Call `cio_prime`.
 3. Read the live Journeys skill — do not guess workflow details:
 

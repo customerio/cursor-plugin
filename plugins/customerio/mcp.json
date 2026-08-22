@@ -1,10 +1,7 @@
 {
   "mcpServers": {
     "customerio": {
-      "url": "https://mcp.customer.io/mcp"
-    },
-    "customerio-eu": {
-      "url": "https://mcp-eu.customer.io/mcp"
+      "url": "https://${CUSTOMERIO_MCP_HOST}/mcp"
     }
   }
 }
