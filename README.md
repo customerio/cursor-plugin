@@ -6,7 +6,7 @@ Canonical repository: [github.com/customerio/cursor-plugin](https://github.com/c
 
 ## What you get
 
-- **Connector** — HTTP MCP at `https://mcp.customer.io/mcp` (US) and `https://mcp-eu.customer.io/mcp` (EU). Cursor’s Connect flow runs Customer.io OAuth. Connect **one** region.
+- **Connector** — one MCP server (`customerio`). Pick **Data center** on the plugin: `mcp.customer.io` (US, default) or `mcp-eu.customer.io` (EU). Cursor’s Connect flow runs Customer.io OAuth.
 - **Skills** — short routers that match how Customer.io already ships agent skills (`cio skills install` writes a bootstrap; the rest stay live on the server):
   - `customerio` — prime, region, dry-run, routing table
   - `customerio-journeys` → `cio_skills_read fly-api`
@@ -21,7 +21,7 @@ Playbooks are not copied into this repo. The MCP serves them so they stay curren
 
 ### Cursor Marketplace (after review)
 
-Install **Customer.io** from [cursor.com/marketplace](https://cursor.com/marketplace), then **Settings → Tools & MCP → Connect** for your region.
+Install **Customer.io** from [cursor.com/marketplace](https://cursor.com/marketplace). EU accounts: **Settings → Plugins → Customer.io → Configure** and set Data center to `mcp-eu.customer.io`. Then **Settings → Tools & MCP → Connect**.
 
 ### Local (development)
 

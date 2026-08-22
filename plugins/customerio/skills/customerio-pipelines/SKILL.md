@@ -12,7 +12,7 @@ description: >
 
 Use this skill for Data Pipelines and integration routing.
 
-1. Confirm the Customer.io MCP server is connected (`customerio` or `customerio-eu`, not both).
+1. Confirm the Customer.io MCP server `customerio` is connected.
 2. Call `cio_prime`.
 3. Read the live CDP skill — it is the entry point for integration questions:
 

@@ -27,13 +27,15 @@ Enable **Include third-party Plugins, Skills, and other configs**. On Team/Enter
 
 Run **Developer: Reload Window**.
 
-Settings → Plugins should list **Customer.io**. Skills should appear under Agent Decides / `/skill`. Tools & MCP should show `customerio` and `customerio-eu`.
+Settings → Plugins should list **Customer.io**. Skills should appear under Agent Decides / `/skill`. Tools & MCP should show a single `customerio` server (not `customerio-eu`).
 
 Prefer a copy over a symlink; Cursor has rejected some symlinks.
 
+If a tester already added Customer.io under **Settings → Tools & MCP** or in `~/.cursor/mcp.json`, **remove that user MCP first**. A user server named `CustomerIO` (or any host at `mcp.customer.io`) shadows the plugin’s `customerio` server. Symptoms: Connect opens GitHub “search issues”, or OAuth is scoped to an old workspace.
+
 ## Connect
 
-Connect **one** region, then complete Customer.io OAuth (workspaces + scopes).
+Set **Data center** on the plugin if needed (**Settings → Plugins → Customer.io → Configure**): `mcp.customer.io` (US, default) or `mcp-eu.customer.io` (EU). Then connect `customerio` and complete Customer.io OAuth (workspaces + scopes).
 
 - Pass: Customer.io consent screen.
 - Fail: GitHub “search issues” fallback (bad MCP schema) or a missing server.
@@ -49,8 +51,19 @@ Connect **one** region, then complete Customer.io OAuth (workspaces + scopes).
 | Add a JavaScript or React Native source | `customerio-pipelines` and/or `customerio-sdk` |
 | Any write | `dry_run` first, then `cio_write_api` with approval |
 
-The agent should **read** the matching Cursor skill, then call `cio_skills_read` on the live MCP root — not guessed Fly paths. EU accounts use `customerio-eu` only.
+The agent should **read** the matching Cursor skill, then call `cio_skills_read` on the live MCP root — not guessed Fly paths. EU accounts set Data center to `mcp-eu.customer.io` before Connect.
 
 ## Team Marketplace (optional soak)
 
-Import `https://github.com/customerio/cursor-plugin` under **Settings → Plugins → Team Marketplaces**. That exercises `marketplace.json`; the local-folder path does not.
+The GitHub repo is **private**. Testers need read access to [customerio/cursor-plugin](https://github.com/customerio/cursor-plugin).
+
+Import that URL under **Settings → Plugins → Team Marketplaces**. That exercises `marketplace.json`; the local-folder path does not.
+
+## Tester brief
+
+Ask teammates to:
+
+1. Remove any existing Customer.io MCP from Tools & MCP / `~/.cursor/mcp.json`.
+2. Install via Team Marketplace (preferred) or the local copy above.
+3. Set Data center if the account is EU, then connect `customerio` and finish Customer.io OAuth.
+4. Run the prompt matrix with **dry-run writes only** unless they own a sandbox workspace.
