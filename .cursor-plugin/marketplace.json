@@ -1,0 +1,18 @@
+{
+  "name": "customerio",
+  "owner": {
+    "name": "Customer.io",
+    "email": "win@customer.io"
+  },
+  "metadata": {
+    "description": "Official Customer.io plugins for Cursor — MCP connector plus skills for Journeys, Pipelines, Design Studio, and SDKs.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "customerio",
+      "source": "./plugins/customerio",
+      "description": "Connect Cursor to Customer.io: shared MCP connector plus skills for automations, profiles, Design Studio, Pipelines, and SDKs."
+    }
+  ]
+}

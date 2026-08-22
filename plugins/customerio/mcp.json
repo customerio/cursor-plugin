@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "customerio": {
+      "url": "https://mcp.customer.io/mcp"
+    },
+    "customerio-eu": {
+      "url": "https://mcp-eu.customer.io/mcp"
+    }
+  }
+}

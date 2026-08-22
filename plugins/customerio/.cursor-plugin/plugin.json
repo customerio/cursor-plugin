@@ -1,0 +1,25 @@
+{
+  "name": "customerio",
+  "displayName": "Customer.io",
+  "version": "1.0.0",
+  "description": "Connect Cursor to Customer.io with the official MCP connector and skills for Journeys, Pipelines, Design Studio, and SDK setup.",
+  "author": {
+    "name": "Customer.io",
+    "email": "win@customer.io"
+  },
+  "homepage": "https://customer.io",
+  "repository": "https://github.com/customerio/cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "customerio",
+    "customer.io",
+    "journeys",
+    "automations",
+    "pipelines",
+    "design-studio",
+    "mcp",
+    "email",
+    "messaging"
+  ],
+  "logo": "assets/logo.svg"
+}

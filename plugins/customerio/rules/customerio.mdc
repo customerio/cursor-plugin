@@ -1,0 +1,14 @@
+---
+description: Customer.io terminology, dry-run writes, and MCP region selection. Use when working with Customer.io, Journeys, Pipelines, Design Studio, or the Customer.io MCP connector.
+alwaysApply: false
+---
+
+# Customer.io
+
+- **Automations** in the product are the `campaigns` API resource.
+- **Profiles** in the product are the `customers` API resource.
+- Connect **one** MCP server: `customerio` (US, `https://mcp.customer.io/mcp`) or `customerio-eu` (EU, `https://mcp-eu.customer.io/mcp`). Do not call both in the same session.
+- Call `cio_prime` before other Customer.io tools.
+- Always run writes and deletes with `dry_run` first. Do not skip the preview.
+- Do not dump raw API payloads, tokens, or customer PII in the conversation unless the user asked for them.
+- Read the matching live skill with `cio_skills_read` before complex operations. Do not guess Fly, CDP, or Design Studio paths.
