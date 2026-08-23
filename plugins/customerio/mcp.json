@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "customerio": {
-      "url": "https://${CUSTOMERIO_MCP_HOST}/mcp"
+      "url": "https://mcp.customer.io/mcp"
     }
   }
 }
