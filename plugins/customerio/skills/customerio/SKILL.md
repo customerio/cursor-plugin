@@ -14,11 +14,10 @@ Connect Cursor to Customer.io through this plugin's MCP server, then drive the w
 
 ## Connect
 
-1. Set **Data center** on the plugin (**Settings → Plugins → Customer.io → Configure**): `mcp.customer.io` (US, default) or `mcp-eu.customer.io` (EU). It must match the account region.
-2. **Settings → Tools & MCP** → connect `customerio`.
-3. Complete Customer.io OAuth. Select workspaces and permission scopes.
-4. If Connect opens a GitHub issues search instead of OAuth, the MCP config was rejected. The plugin ships a url-only host (no `type` field).
-5. If OAuth succeeds but workspaces are missing, the data center is wrong — switch it and reconnect. Do not add a second MCP server.
+1. **Settings → Tools & MCP** → connect `customerio`.
+2. Complete Customer.io OAuth. Select workspaces and permission scopes. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
+3. If Connect opens a GitHub issues search instead of OAuth, the MCP config was rejected. The plugin ships a url-only host (no `type` field).
+4. Do not add a second Customer.io MCP server.
 
 Do not paste a personal MCP URL. Do not put API keys or service-account tokens in this plugin.
 

@@ -6,9 +6,9 @@ This folder is what Cursor loads (`~/.cursor/plugins/local/customerio` or a mark
 
 ## Connect
 
-**Settings → Plugins → Customer.io → Configure** and set **Data center** to match the account (`mcp.customer.io` US, `mcp-eu.customer.io` EU). Then **Settings → Tools & MCP** and connect `customerio`.
+**Settings → Tools & MCP** and connect `customerio`. Complete OAuth and pick workspaces plus scopes. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
 
-Complete OAuth and pick workspaces plus scopes. Do not paste a personal MCP URL. Do not add a second Customer.io MCP server.
+Do not paste a personal MCP URL. Do not add a second Customer.io MCP server.
 
 ## Skills
 

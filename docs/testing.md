@@ -35,7 +35,7 @@ If a tester already added Customer.io under **Settings → Tools & MCP** or in `
 
 ## Connect
 
-Set **Data center** on the plugin if needed (**Settings → Plugins → Customer.io → Configure**): `mcp.customer.io` (US, default) or `mcp-eu.customer.io` (EU). Then connect `customerio` and complete Customer.io OAuth (workspaces + scopes).
+Connect `customerio` and complete Customer.io OAuth (workspaces + scopes). The connector URL is `mcp.customer.io`; the account’s home region is selected after login. Existing installs that used a Data center of `mcp-eu.customer.io` should reconnect once.
 
 - Pass: Customer.io consent screen.
 - Fail: GitHub “search issues” fallback (bad MCP schema) or a missing server.
@@ -51,7 +51,7 @@ Set **Data center** on the plugin if needed (**Settings → Plugins → Customer
 | Add a JavaScript or React Native source | `customerio-pipelines` and/or `customerio-sdk` |
 | Any write | `dry_run` first, then `cio_write_api` with approval |
 
-The agent should **read** the matching Cursor skill, then call `cio_skills_read` on the live MCP root — not guessed Fly paths. EU accounts set Data center to `mcp-eu.customer.io` before Connect.
+The agent should **read** the matching Cursor skill, then call `cio_skills_read` on the live MCP root — not guessed Fly paths. EU accounts connect the same `customerio` URL; region is selected after OAuth.
 
 ## Team Marketplace (optional soak)
 
@@ -65,5 +65,5 @@ Ask teammates to:
 
 1. Remove any existing Customer.io MCP from Tools & MCP / `~/.cursor/mcp.json`.
 2. Install via Team Marketplace (preferred) or the local copy above.
-3. Set Data center if the account is EU, then connect `customerio` and finish Customer.io OAuth.
+3. Connect `customerio` and finish Customer.io OAuth (EU accounts use the same URL).
 4. Run the prompt matrix with **dry-run writes only** unless they own a sandbox workspace.
