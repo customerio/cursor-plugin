@@ -67,3 +67,5 @@ Ask teammates to:
 2. Install via Team Marketplace (preferred) or the local copy above.
 3. Connect `customerio` and finish Customer.io OAuth (EU accounts use the same URL).
 4. Run the prompt matrix with **dry-run writes only** unless they own a sandbox workspace.
+
+Cloud agents cannot load the Desktop plugin. They can still run the executable checks in [docs/agent-smoke-tests.md](agent-smoke-tests.md) against the repo files and, when MCP is connected, the live connector.
