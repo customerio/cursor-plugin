@@ -7,7 +7,7 @@
     "name": "Customer.io",
     "email": "win@customer.io"
   },
-  "homepage": "https://customer.io",
+  "homepage": "https://docs.customer.io/ai/plugins/cursor-grok-bot/",
   "repository": "https://github.com/customerio/cursor-plugin",
   "license": "MIT",
   "keywords": [
