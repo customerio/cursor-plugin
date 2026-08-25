@@ -1,8 +1,8 @@
 # Customer.io
 
-Cursor plugin: official Customer.io **MCP connector** plus **skills** for Journeys, Pipelines, Design Studio, and SDK setup.
+Official Customer.io plugin for Cursor: **MCP connector** plus **skills** for Journeys, Pipelines, Design Studio, and SDK setup.
 
-This folder is what Cursor loads (`~/.cursor/plugins/local/customerio` or a marketplace install). The git repository that contains it is [customerio/cursor-plugin](https://github.com/customerio/cursor-plugin).
+Install from the [Cursor Marketplace](https://cursor.com/marketplace) and follow [Customer.io plugin for Cursor and Grok bot](https://docs.customer.io/ai/plugins/cursor-grok-bot/). This folder is the package Cursor loads. Source: [customerio/cursor-plugin](https://github.com/customerio/cursor-plugin).
 
 ## Connect
 

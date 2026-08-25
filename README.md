@@ -2,6 +2,8 @@
 
 Official Customer.io plugin for the [Cursor Marketplace](https://cursor.com/marketplace): a shared MCP connector plus skills. It is not a per-user MCP URL.
 
+Install and connect: [Customer.io plugin for Cursor and Grok bot](https://docs.customer.io/ai/plugins/cursor-grok-bot/)
+
 Canonical repository: [github.com/customerio/cursor-plugin](https://github.com/customerio/cursor-plugin)
 
 ## What you get
@@ -19,23 +21,11 @@ Playbooks are not copied into this repo. The MCP serves them so they stay curren
 
 ## Install
 
-### Cursor Marketplace (after review)
+Install **Customer.io** from the [Cursor Marketplace](https://cursor.com/marketplace), then **Settings → Tools & MCP → Connect**. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
 
-Install **Customer.io** from [cursor.com/marketplace](https://cursor.com/marketplace). Then **Settings → Tools & MCP → Connect**. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
+Do not paste a personal MCP URL. Do not add a second Customer.io MCP server. If you previously used **Add to Cursor** or a hand-edited `mcp.json`, remove that server first.
 
-### Local (development)
-
-```bash
-mkdir -p ~/.cursor/plugins/local
-rm -rf ~/.cursor/plugins/local/customerio
-cp -R plugins/customerio ~/.cursor/plugins/local/customerio
-```
-
-Enable third-party plugins, then **Developer: Reload Window**. See [docs/testing.md](docs/testing.md).
-
-### Team Marketplace (internal soak)
-
-**Settings → Plugins → Team Marketplaces → Import** `https://github.com/customerio/cursor-plugin`.
+Until the Marketplace listing is live, follow the [plugin docs](https://docs.customer.io/ai/plugins/cursor-grok-bot/) rather than adding `mcp.customer.io` by hand.
 
 ## Use
 
@@ -48,24 +38,15 @@ After Connect, ask in Cursor, for example:
 
 The agent should call `cio_prime`, read the matching skill, then use `cio_schema` / `cio_read_api`. Writes run with dry-run first.
 
-More: [Customer.io MCP for Cursor](https://docs.customer.io/ai/mcp/ide/).
+## Contributors
 
-## Validate
+This is a public multi-plugin marketplace repo. `plugins/customerio` is the package Cursor loads.
 
 ```bash
 node scripts/validate-template.mjs
 ```
 
-## Canonical GitHub repo
-
-This package lists `https://github.com/customerio/cursor-plugin` as its repository. Create it on the `customerio` org (needs org permission):
-
-```bash
-chmod +x scripts/create-github-repo.sh
-./scripts/create-github-repo.sh
-```
-
-The repo can stay private while you build. Make it **public** before submitting at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish). Steps: [docs/PUBLISH.md](docs/PUBLISH.md).
+See [docs/testing.md](docs/testing.md) if you are changing the plugin package itself.
 
 ## License
 
