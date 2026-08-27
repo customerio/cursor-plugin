@@ -281,6 +281,11 @@ async function main() {
     }
   }
 
+  const marketplaceVersion = marketplace.metadata?.version;
+  if (typeof marketplaceVersion !== "string" || marketplaceVersion.length === 0) {
+    addError('Marketplace "metadata.version" is required.');
+  }
+
   const seenNames = new Set();
   for (const [index, entry] of marketplace.plugins.entries()) {
     const label = `plugins[${index}]`;
@@ -331,6 +336,18 @@ async function main() {
     if (pluginManifest.name && pluginManifest.name !== entry.name) {
       addError(
         `${entry.name}: marketplace entry name does not match plugin.json name ("${pluginManifest.name}").`
+      );
+    }
+
+    if (typeof pluginManifest.version !== "string" || pluginManifest.version.length === 0) {
+      addError(`${entry.name}: "version" in plugin.json is required.`);
+    } else if (
+      typeof marketplaceVersion === "string" &&
+      marketplaceVersion.length > 0 &&
+      pluginManifest.version !== marketplaceVersion
+    ) {
+      addError(
+        `${entry.name}: plugin.json version "${pluginManifest.version}" does not match marketplace metadata.version "${marketplaceVersion}".`
       );
     }
 

@@ -7,3 +7,4 @@ Do this in a separate pass. Do not submit from this working tree until `customer
 3. Optional: import that URL as a Team Marketplace and soak internally.
 4. Submit the repo URL at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish). Cursor’s template also mentions Slack or `kniparko@anysphere.com`.
 5. Anysphere reviews security, data handling, and quality. Every later version bump is reviewed again — keep playbooks on the MCP, not in git.
+6. Marketplace listing **Website URL** must be `https://docs.customer.io/ai/plugins/cursor-grok-bot/` — not `customer.io` and not the generic IDE MCP page.

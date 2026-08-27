@@ -25,8 +25,6 @@ Install **Customer.io** from the [Cursor Marketplace](https://cursor.com/marketp
 
 Do not paste a personal MCP URL. Do not add a second Customer.io MCP server. If you previously used **Add to Cursor** or a hand-edited `mcp.json`, remove that server first.
 
-Until the Marketplace listing is live, follow the [plugin docs](https://docs.customer.io/ai/plugins/cursor-grok-bot/) rather than adding `mcp.customer.io` by hand.
-
 ## Use
 
 After Connect, ask in Cursor, for example:
@@ -41,6 +39,8 @@ The agent should call `cio_prime`, read the matching skill, then use `cio_schema
 ## Contributors
 
 This is a public multi-plugin marketplace repo. `plugins/customerio` is the package Cursor loads.
+
+Skill content under `plugins/customerio/skills/` is the source of truth. It is mirrored 1:1 to [customerio/claude-plugin](https://github.com/customerio/claude-plugin) and adapted in [customerio/openai-plugin](https://github.com/customerio/openai-plugin). When you change a skill here, port the change to those repos (the OpenAI copy is re-reviewed by the OpenAI portal, so batch changes there).
 
 ```bash
 node scripts/validate-template.mjs
