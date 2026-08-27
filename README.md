@@ -40,8 +40,6 @@ The agent should call `cio_prime`, read the matching skill, then use `cio_schema
 
 This is a public multi-plugin marketplace repo. `plugins/customerio` is the package Cursor loads.
 
-Skill content under `plugins/customerio/skills/` is the source of truth. It is mirrored 1:1 to [customerio/claude-plugin](https://github.com/customerio/claude-plugin) and adapted in [customerio/openai-plugin](https://github.com/customerio/openai-plugin). When you change a skill here, port the change to those repos (the OpenAI copy is re-reviewed by the OpenAI portal, so batch changes there).
-
 ```bash
 node scripts/validate-template.mjs
 ```
