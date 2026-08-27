@@ -11,7 +11,7 @@ Record each case as **pass**, **fail**, or **skip** (MCP not connected), with on
 | ID | Check | Pass if |
 | --- | --- | --- |
 | A1 | [`plugins/customerio/mcp.json`](../plugins/customerio/mcp.json) | Single server `customerio`, url `https://mcp.customer.io/mcp`, no `type` field |
-| A2 | [`plugins/customerio/.cursor-plugin/plugin.json`](../plugins/customerio/.cursor-plugin/plugin.json) | `version` is `1.2.0`, no `variables` / `CUSTOMERIO_MCP_HOST` |
+| A2 | [`plugins/customerio/.cursor-plugin/plugin.json`](../plugins/customerio/.cursor-plugin/plugin.json) | `version` matches `.cursor-plugin/marketplace.json` `metadata.version`, and no `variables` / `CUSTOMERIO_MCP_HOST` |
 | A3 | Skills | `plugins/customerio/skills/` contains `customerio`, `customerio-journeys`, `customerio-design-studio`, `customerio-pipelines`, `customerio-sdk` |
 | A4 | Connect copy | Skill/README/rule do **not** tell the user to pick a Data center or `mcp-eu` |
 

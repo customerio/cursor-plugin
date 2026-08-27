@@ -1,6 +1,6 @@
 # Customer.io for Cursor
 
-Official Customer.io plugin for the [Cursor Marketplace](https://cursor.com/marketplace): a shared MCP connector plus skills. It is not a per-user MCP URL.
+Official Customer.io plugin for the [Cursor Marketplace](https://cursor.com/marketplace/customerio): a shared MCP connector plus skills. It is not a per-user MCP URL.
 
 Install and connect: [Customer.io plugin for Cursor and Grok bot](https://docs.customer.io/ai/plugins/cursor-grok-bot/)
 
@@ -21,11 +21,9 @@ Playbooks are not copied into this repo. The MCP serves them so they stay curren
 
 ## Install
 
-Install **Customer.io** from the [Cursor Marketplace](https://cursor.com/marketplace), then **Settings → Tools & MCP → Connect**. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
+Install **Customer.io** from the [Cursor Marketplace](https://cursor.com/marketplace/customerio), then **Settings → Tools & MCP → Connect**. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
 
 Do not paste a personal MCP URL. Do not add a second Customer.io MCP server. If you previously used **Add to Cursor** or a hand-edited `mcp.json`, remove that server first.
-
-Until the Marketplace listing is live, follow the [plugin docs](https://docs.customer.io/ai/plugins/cursor-grok-bot/) rather than adding `mcp.customer.io` by hand.
 
 ## Use
 
