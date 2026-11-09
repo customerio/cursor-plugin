@@ -12,7 +12,7 @@ description: >
 
 Use this skill for installing Customer.io in an app and Builder/sandbox onboarding.
 
-1. Confirm the Customer.io MCP server `customerio` is connected.
+1. Confirm the Customer.io MCP server `customerio` is connected. If the user has no Customer.io account, follow *No Customer.io account yet?* below first.
 2. Call `cio_prime`.
 3. Read the live CLI/onboarding skill:
 
@@ -28,3 +28,13 @@ Use this skill for installing Customer.io in an app and Builder/sandbox onboardi
 
 4. For the Pipelines source itself (write keys, source settings), also read `cdp-api/sources.md`.
 5. Do not put service-account tokens in application code. Use source write keys for identify/track and App API keys for backend transactional sends.
+
+## No Customer.io account yet?
+
+The MCP server signs in to an existing account through OAuth, so it can't create one. When the user has no Customer.io account, create it with the Customer.io CLI. Don't send them to sign up on the website.
+
+1. Install the CLI: `npm install -g @customerio/cli`.
+2. Run `cio skills read cio/auth.md` and follow its signup section (`cio auth signup start`, then `cio auth signup verify`). This file is CLI-only, so `cio_skills_read` can't serve it.
+3. Signup emails the user a code. Ask the user for it and wait. Never guess a code.
+4. After signup, keep going with the CLI: run `cio prime` and follow its rules.
+5. To use this plugin's MCP server with the new account, an account admin turns on **Customer.io MCP** at https://fly.customer.io/settings/ai. Accounts created with the CLI start with it off. Then connect the MCP server.
