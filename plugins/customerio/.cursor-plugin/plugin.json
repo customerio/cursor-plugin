@@ -1,7 +1,7 @@
 {
   "name": "customerio",
   "displayName": "Customer.io",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Connect Cursor to Customer.io with the official MCP connector and skills for Journeys, Pipelines, Design Studio, and SDK setup.",
   "author": {
     "name": "Customer.io",
