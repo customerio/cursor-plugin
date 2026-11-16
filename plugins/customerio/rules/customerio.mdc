@@ -9,6 +9,7 @@ alwaysApply: false
 - **Profiles** in the product are the `customers` API resource.
 - Use the plugin MCP server `customerio` (`mcp.customer.io`). The account’s home region is selected after OAuth. Do not add a second server.
 - Call `cio_prime` before other Customer.io tools.
+- A user with no Customer.io account can't connect the MCP server. Create the account with the Customer.io CLI (`npm install -g @customerio/cli`, then follow `cio skills read cio/auth.md`), not on the website. The `customerio` skill has the steps.
 - Always run writes and deletes with `dry_run` first. Do not skip the preview.
 - Do not dump raw API payloads, tokens, or customer PII in the conversation unless the user asked for them.
 - Read the matching live skill with `cio_skills_read` before complex operations. Do not guess Fly, CDP, or Design Studio paths.
