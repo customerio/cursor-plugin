@@ -8,7 +8,7 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace/customerio)
 
 **Settings → Tools & MCP** and connect `customerio`. Complete OAuth and pick workspaces plus scopes. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
 
-No Customer.io account yet? Connect opens a page where you create one with your email and a code Customer.io emails you, then continues to the workspace and scope choice.
+No Customer.io account yet? Connect opens a page where you create one with your email and a code Customer.io emails you, then continues to the workspace and scope choice. You choose the new account's data center there, once.
 
 Do not paste a personal MCP URL. Do not add a second Customer.io MCP server.
 

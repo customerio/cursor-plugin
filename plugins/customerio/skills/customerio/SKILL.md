@@ -38,7 +38,7 @@ CLI signup works too.
 ## Connect
 
 1. **Settings → Tools & MCP** → connect `customerio`.
-2. Complete Customer.io OAuth. Select workspaces and permission scopes. The connector URL is `mcp.customer.io`; the account’s home region is selected after login.
+2. Complete Customer.io OAuth. Select workspaces and permission scopes. The connector URL is `mcp.customer.io`; the account’s home region is selected after login, so connecting an existing account needs no region choice.
 3. If Connect opens a GitHub issues search instead of OAuth, the MCP config was rejected. The plugin ships a url-only host (no `type` field).
 4. Do not add a second Customer.io MCP server.
 
