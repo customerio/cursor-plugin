@@ -13,7 +13,7 @@ Record each case as **pass**, **fail**, or **skip** (MCP not connected), with on
 | A1 | [`plugins/customerio/mcp.json`](../plugins/customerio/mcp.json) | Single server `customerio`, url `https://mcp.customer.io/mcp`, no `type` field |
 | A2 | [`plugins/customerio/.cursor-plugin/plugin.json`](../plugins/customerio/.cursor-plugin/plugin.json) | `version` matches `.cursor-plugin/marketplace.json` `metadata.version`, and no `variables` / `CUSTOMERIO_MCP_HOST` |
 | A3 | Skills | `plugins/customerio/skills/` contains only `customerio` |
-| A4 | Connect copy | Skill/README/rule do **not** tell the user to pick a Data center or `mcp-eu` |
+| A4 | Connect copy | Skill/README/rule do **not** tell the user to pick a data center or `mcp-eu` to connect an existing account. A new account choosing its data center at signup is expected |
 
 ## B. Auth and region (MCP)
 
