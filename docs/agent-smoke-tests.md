@@ -2,7 +2,7 @@
 
 Executable checks for the Customer.io Cursor plugin and its MCP connector. Cloud agents cannot load Desktop plugins; they can still verify repo files and, if Customer.io MCP is connected, run the live cases.
 
-**Safety:** dry-run every write and delete. Do not execute live mutations. Do not dump raw API payloads, tokens, or customer PII.
+**Safety:** dry-run every write, and do not delete anything. Do not execute live mutations. Do not dump raw API payloads, tokens, or customer PII.
 
 Record each case as **pass**, **fail**, or **skip** (MCP not connected), with one line of evidence.
 
@@ -12,7 +12,7 @@ Record each case as **pass**, **fail**, or **skip** (MCP not connected), with on
 | --- | --- | --- |
 | A1 | [`plugins/customerio/mcp.json`](../plugins/customerio/mcp.json) | Single server `customerio`, url `https://mcp.customer.io/mcp`, no `type` field |
 | A2 | [`plugins/customerio/.cursor-plugin/plugin.json`](../plugins/customerio/.cursor-plugin/plugin.json) | `version` matches `.cursor-plugin/marketplace.json` `metadata.version`, and no `variables` / `CUSTOMERIO_MCP_HOST` |
-| A3 | Skills | `plugins/customerio/skills/` contains `customerio`, `customerio-journeys`, `customerio-design-studio`, `customerio-pipelines`, `customerio-sdk` |
+| A3 | Skills | `plugins/customerio/skills/` contains only `customerio` |
 | A4 | Connect copy | Skill/README/rule do **not** tell the user to pick a Data center or `mcp-eu` |
 
 ## B. Auth and region (MCP)
@@ -44,7 +44,7 @@ Use workspace id from B2. Discover paths with `cio_schema` first. Use `jq` to ke
 | ID | Check | Pass if |
 | --- | --- | --- |
 | D1 | Dry-run create | `cio_schema` for the create endpoint, then `cio_write_api` with `dry_run: true` for a harmless resource (prefer a segment or automation name prefixed `cursor-plugin-smoke-`). Preview returns; nothing is created |
-| D2 | No live write | No `cio_write_api` / `cio_delete_api` without `dry_run: true` in this run |
+| D2 | No live write | No `cio_write_api` without `dry_run: true` and no `cio_delete_api` in this run |
 
 ## Report
 
