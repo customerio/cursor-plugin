@@ -9,13 +9,8 @@ Canonical repository: [github.com/customerio/cursor-plugin](https://github.com/c
 ## What you get
 
 - **Connector** — one MCP server (`customerio`) at `https://mcp.customer.io/mcp`. Cursor’s Connect flow runs Customer.io OAuth; the account’s home region is selected after login.
-- **Skills** — short routers that match how Customer.io already ships agent skills (`cio skills install` writes a bootstrap; the rest stay live on the server):
-  - `customerio` — prime, region, dry-run, routing table
-  - `customerio-journeys` → `cio_skills_read fly-api`
-  - `customerio-design-studio` → `design-studio`
-  - `customerio-pipelines` → `cdp-api`
-  - `customerio-sdk` → `cio`
-- **Rule** — Automations = `campaigns`, Profiles = `customers`; dry-run writes.
+- **Skill** — `customerio`: connect, sign up, then `cio_prime` and the server’s skills.
+- **Rule** — Automations = `campaigns`, Profiles = `customers`.
 
 Playbooks are not copied into this repo. The MCP serves them so they stay current.
 

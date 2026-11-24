@@ -5,14 +5,14 @@
     "email": "win@customer.io"
   },
   "metadata": {
-    "description": "Official Customer.io plugins for Cursor — MCP connector plus skills for Journeys, Pipelines, Design Studio, and SDKs.",
+    "description": "Official Customer.io plugin for Cursor, built on the Customer.io MCP connector.",
     "version": "1.4.0"
   },
   "plugins": [
     {
       "name": "customerio",
       "source": "./plugins/customerio",
-      "description": "Connect Cursor to Customer.io: shared MCP connector plus skills for automations, profiles, Design Studio, Pipelines, and SDKs. New to Customer.io? Create your account while you connect."
+      "description": "Connect Cursor to Customer.io with the official MCP connector: build and analyze automations, segments and profiles in Journeys, draft Design Studio emails, add the SDKs to your apps, and set up integrations with your data warehouse, CRM and other tools. New to Customer.io? Create your account while you connect."
     }
   ]
 }
