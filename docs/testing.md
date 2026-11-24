@@ -45,13 +45,13 @@ Connect `customerio` and complete Customer.io OAuth (workspaces + scopes). The c
 | Prompt | Expect |
 | --- | --- |
 | List my Customer.io workspaces / which region am I on? | Bootstrap skill, `cio_prime` / auth |
-| List active automations | `customerio-journeys` then `cio_skills_read` `fly-api` |
-| Create a win-back segment of people who haven’t opened in 30 days | Journeys skill; profiles language in the description |
-| Draft or review a Design Studio email | `customerio-design-studio` |
-| Add a JavaScript or React Native source | `customerio-pipelines` and/or `customerio-sdk` |
+| List active automations | `customerio` skill, `cio_prime`, then `cio_skills_read` `fly-api` |
+| Create a win-back segment of people who haven’t opened in 30 days | `customerio` skill, then `fly-api` |
+| Draft or review a Design Studio email | `customerio` skill, then `design-studio` |
+| Add a JavaScript or React Native source | `customerio` skill, then `cdp-api`, `mobile-sdk` or `cio` |
 | Any write | `dry_run` first, then `cio_write_api` with approval |
 
-The agent should **read** the matching Cursor skill, then call `cio_skills_read` on the live MCP root — not guessed Fly paths. EU accounts connect the same `customerio` URL; region is selected after OAuth.
+The agent should **read** the `customerio` skill, then call `cio_skills_read` on the live MCP root — not guessed Fly paths. EU accounts connect the same `customerio` URL; region is selected after OAuth.
 
 ## Team Marketplace (optional soak)
 
